@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Actors">
+      <UniqueIdentifier>{a9b00022-b70a-4d27-ae71-923ec69f42e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Actors\Tanks">
+      <UniqueIdentifier>{74d1d3cf-1714-4d28-8fc9-19e9150b6ce6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\States">
+      <UniqueIdentifier>{635fc0b0-06ce-4f02-84d2-e69d13df2a15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Actors\Tanks\TankControllers">
+      <UniqueIdentifier>{ef2b9b52-5d1a-409c-8c4b-fca99eccf6e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorManager.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor.cpp">
+      <Filter>Resource Files\Source Files\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="Tank.cpp">
+      <Filter>Resource Files\Source Files\Actors\Tanks</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Resource Files\Source Files\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="FireTank.h">
+      <Filter>Resource Files\Source Files\Actors\Tanks</Filter>
+    </ClCompile>
+    <ClCompile Include="FireTank.cpp">
+      <Filter>Resource Files\Source Files\Actors\Tanks</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
+      <Filter>Resource Files\Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="TankController.cpp">
+      <Filter>Resource Files\Source Files\Actors\Tanks\TankControllers</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommands.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommands.h">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>Resource Files\Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayState.cpp">
+      <Filter>Resource Files\Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="OverState.cpp">
+      <Filter>Resource Files\Source Files\States</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>Resource Files\Source Files\Actors</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerController.cpp">
+      <Filter>Resource Files\Source Files\Actors\Tanks\TankControllers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameData.cpp">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActorManager.h">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Team.h">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor.h">
+      <Filter>Resource Files\Source Files\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="Tank.h">
+      <Filter>Resource Files\Source Files\Actors\Tanks</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Resource Files\Source Files\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Resource Files\Source Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="RushTank.h">
+      <Filter>Resource Files\Source Files\Actors\Tanks</Filter>
+    </ClInclude>
+    <ClInclude Include="TankController.h">
+      <Filter>Resource Files\Source Files\Actors\Tanks\TankControllers</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>Resource Files\Source Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayState.h">
+      <Filter>Resource Files\Source Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="OverState.h">
+      <Filter>Resource Files\Source Files\States</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Resource Files\Source Files\Actors</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerController.h">
+      <Filter>Resource Files\Source Files\Actors\Tanks\TankControllers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameData.h">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
