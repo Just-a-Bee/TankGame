@@ -8,7 +8,7 @@
 
 
 
-class MenuState; // Declare menuState class to avoid recursive inclusion
+class MenuState; // Declare menuState class to avoid self inclusion
 
 class Command {
 private:
@@ -36,15 +36,23 @@ public:
 	void execute();
 };
 
+class TitleCommand : public Command {
+public:
+	TitleCommand(MenuState* m) {
+		setMenu(m);
+	}
+	void execute();
+};
+
 class QuitCommand : public Command {
 public: 
 	QuitCommand(MenuState* m) : Command(m) {};
 	void execute();
 };
 
-class SettingsCommand : public Command {
+class HowToCommand : public Command {
 public:
-	SettingsCommand(MenuState* m) : Command(m) {};
+	HowToCommand(MenuState* m) : Command(m) {};
 	void execute();
 };
 #endif

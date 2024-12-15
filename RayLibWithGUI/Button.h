@@ -16,14 +16,19 @@ private:
 	Command* pressCommand = nullptr;
 	Vector2 position = Vector2{0,0};
 	Vector2 size = Vector2{0,0};
-	std::string name = "none";
+	std::string text = "none";
 	
+	Color color = RED;
+	Color darkColor = MAROON;
+	Color textColor = BLACK;
+	int fontSize = 10;
+
 	bool depressed = false;
 
 public:
 	// Constructor functions
 	Button();
-	Button(Command*, Vector2, Vector2, std::string);
+	Button(Command*, Vector2, Vector2, std::string, Color, Color, Color, int);
 
 	// Set and get functions
 	void setPosition(Vector2);

@@ -10,13 +10,10 @@
 #define WALL_H
 
 class Wall : public Actor {
-private:
-	const int SIZE = 10;
 public:
 	Wall();
 	Wall(int, int);
 
-	BoundingBox bounds();
 	void draw();
 };
 

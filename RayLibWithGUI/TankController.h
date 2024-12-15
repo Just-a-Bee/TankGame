@@ -1,4 +1,6 @@
-// Specification file for tank controller classes, process function is called by controlled tank every frame
+// Specification file for tank controller classes
+// Uses strategy pattern to allow tanks to have different behaviors
+// Process function is called by controlled tank every frame
 
 #include "Tank.h"
 #include "FireTank.h"
@@ -26,16 +28,3 @@ public:
 
 #endif
 
-// AI controller moves the tank to attack tanks on other teams
-#ifndef AICONTROLLER_H
-#define AICONTROLLER_H
-
-class AIController : public TankController {
-private:
-	const float MAX_TARGET_RANGE = 100;
-public:
-	void process();
-	Tank* findTarget();
-};
-
-#endif

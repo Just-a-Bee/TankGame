@@ -2,10 +2,29 @@
 // Contains a vector of actors and calls their process and draw functions every frame
 
 #include "ActorManager.h"
-#include "Actor.h" // Actor is included here to get around recursive #includes
+#include "Actor.h" // Actor is included here to get around circular inclusion
+#include "Wall.h" 
+#include "FireTank.h";
+#include "PlayerController.h"
+#include "AIController.h"
 
-// Adding and removing actor functions
+// Constructor function initializes actors
+ActorManager::ActorManager() {
 
+
+	
+	// Initialize walls
+	for (int i = 0; i < wallMap.size(); i++)
+		for (int j = 0; j < wallMap[0].size(); j++)
+			if (wallMap[i][j] == 1) {
+				addActor(new Wall(i , j ));
+			}
+
+}
+
+
+// Functions to interface with actorVec
+// 
 // Function to get vector of actors
 std::vector<Actor*> ActorManager::getActors() {
 	return actorVec;
@@ -19,7 +38,7 @@ void ActorManager::addActor(Actor* a) {
 void ActorManager::queueRemoveActor(Actor* a) {
 	removeQueue.push_back(a);
 }
-// Function to remove an actor
+// Function to remove an actor, called after processing frame
 void ActorManager::removeActor(Actor* a) {
 	// Iterate over the vector, looking for the actor
 	for (int i = 0; i < actorVec.size(); i++) {
@@ -31,41 +50,35 @@ void ActorManager::removeActor(Actor* a) {
 	}
 }
 
-int ActorManager::getScore() {
-	return score;
+// Get function for wallMap
+std::vector<std::vector<int>> ActorManager::getWallMap() {
+	return wallMap;
 }
 
-void ActorManager::incrementScore() {
-	score += 1;
-}
 
 
 // Functions called every frame
 
 // Call process for every actor in vector
 void ActorManager::processFrame() {
-	std::vector<Actor*> actors = actorVec; // duplicate the vector in case it changes
-	for (Actor* a : actors) {
-		if (a->belongsToManager(this)) // check if a has been removed, if it has don't process it
+	for (Actor* a : actorVec) {
 			a->process();
 	}
 }
 // Call update overlaps for every actor in vector
 void ActorManager::updateOverlaps() {
-	std::vector<Actor*> actors = actorVec; // duplicate the vector in case it changes
-	for (Actor* a : actors) {
-		if (a->belongsToManager(this)) // check if a has been removed, if it has don't update it
+	for (Actor* a : actorVec) {
 			a->updateOverlaps();
 	}
 }
-// Call erase for each actor that an erase was queued for
+// Call remove every actor that shouldve been removed this frame
 void ActorManager::removeActors() {
 	for (Actor* a : removeQueue)
 		if (a->getManager() == this)
 			removeActor(a);
 	removeQueue.clear();
 }
-// Call draw for every actor in vector
+// Call draw for every actor in vector, must happen after BeginDrawMode3D(Camera)
 void ActorManager::drawFrame() {
 	for (Actor* a : actorVec) {
 		a->draw();

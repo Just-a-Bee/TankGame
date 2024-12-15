@@ -2,6 +2,8 @@
 
 #include "MenuCommands.h"
 #include "MenuState.h"
+#include "TitleState.h"
+#include "HowToState.h"
 
 void Command::setMenu(MenuState* m) {
 	menu = m;
@@ -11,14 +13,16 @@ MenuState* Command::getMenu() {
 }
 void Command::execute() {};
 
-
-
 void PlayCommand::execute() {
-	getMenu()->setPlayPressed(true);
+	getMenu()->setReturnState(new PlayState);
 };
-void QuitCommand::execute() {
-	getMenu()->setQuitPressed(true);
+
+void TitleCommand::execute() {
+	getMenu()->setReturnState(new TitleState);
 }
-void SettingsCommand::execute() {
-	std::cout << "Settings pressed";
+void QuitCommand::execute() {
+	getMenu()->setShouldClose(true);
+}
+void HowToCommand::execute() {
+	getMenu()->setReturnState(new HowToState);
 };

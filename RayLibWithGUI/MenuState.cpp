@@ -2,34 +2,52 @@
 
 #include "MenuState.h"
 
-// Set functions
-void MenuState::setPlayPressed(bool b) {
-	isPlayPressed = b;
-}
-void MenuState::setQuitPressed(bool b) {
-	isQuitPressed = b;
+
+void MenuState::addButton(Button b) {
+	buttonVec.push_back(b);
 }
 
-// When menu state is entered, create buttons
-void MenuState::enterState() {
-	buttonVec.push_back(Button(new PlayCommand(this), Vector2{ 10, 10 }, Vector2{ 100,100 }, "Play"));
-	buttonVec.push_back(Button(new QuitCommand(this), Vector2{ 200, 200 }, Vector2{ 100,100 }, "Quit"));
+void MenuState::setShouldClose(bool b) {
+	shouldClose = b;
 }
+
+void MenuState::setReturnState(GameState* s) {
+	returnState = s;
+}
+
+
+// Virtual function called when state is entered
+void MenuState::enterState() {
+
+}
+
+
 // Next frame function draws buttons and handles clicking
 void MenuState::nextFrame() {
 
+	// Handle mouse input for buttons
 	if (IsMouseButtonPressed(MOUSE_BUTTON_LEFT) || IsMouseButtonReleased(MOUSE_BUTTON_LEFT))
 		handleMouseClick();
 
 	BeginDrawing();
 	ClearBackground(RAYWHITE);
 
+	drawBG();
 
+
+	// Draw the buttons
 	for (Button b : buttonVec)
 		b.draw();
 
+
 	EndDrawing();
+
+	if (shouldClose)
+		CloseWindow();
+
 }
+
+
 
 // When a mouse click happens, check if a button was clicked
 void MenuState::handleMouseClick() {
@@ -65,10 +83,5 @@ void MenuState::handleMouseClick() {
 
 // Should change to returns the play state if play was pressed
 GameState* MenuState::shouldChangeTo() {
-	if (isQuitPressed)
-		CloseWindow();
-	if (isPlayPressed)
-		return new PlayState;
-	else
-		return nullptr;
+	return returnState;
 }

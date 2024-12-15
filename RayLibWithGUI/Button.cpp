@@ -4,11 +4,16 @@
 
 // Constructor functions
 Button::Button() {};
-Button::Button(Command* c, Vector2 pos, Vector2 s, std::string n) {
+// ugh this constructor is massive
+Button::Button(Command* c, Vector2 pos, Vector2 s, std::string t, Color col, Color darkCol, Color textCol, int fontSi) {
 	pressCommand = c;
 	position = pos;
 	size = s;
-	name = n;
+	text = t;
+	color = col;
+	darkColor = darkCol;
+	textColor = textCol;
+	fontSize = fontSi;
 }
 
 // Set and get vars
@@ -38,11 +43,19 @@ void Button::press() {
 
 // Draw function draws it on the screen
 void Button::draw() {
-	Color drawColor = GRAY;
+	// If button is depressed, the body is drawn as dark
+	Color drawColor = color;
 	if (depressed)
-		drawColor = DARKGRAY;
+		drawColor = darkColor;
+	
+	// Draw the body
 	DrawRectangle(position.x, position.y, size.x, size.y, drawColor);
-	DrawRectangleLines(position.x, position.y, size.x, size.y, DARKGRAY);
-	DrawText(name.c_str(), position.x + size.x / 2, position.y + size.y / 2, 10, BLACK); // Display text in center of button
+	DrawRectangleLines(position.x, position.y, size.x, size.y, darkColor);
+	
+	// Calculate position of text to display it centered
+	Vector2 textPos = Vector2{ position.x + size.x / 2, position.y + size.y / 2 };
+	textPos.x -= MeasureText(text.c_str(), fontSize)/2;
+	textPos.y -= fontSize/2;
+	DrawText(text.c_str(), textPos.x, textPos.y, fontSize, textColor);
 
 }

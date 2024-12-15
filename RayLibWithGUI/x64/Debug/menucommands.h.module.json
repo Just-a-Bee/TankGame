@@ -1,22 +1,9 @@
 {
-    "version": 1,
-    "revision": 0,
-    "rules": [
-        {
-            "primary-output": "x64\\Debug\\MenuCommands.h.obj",
-            "outputs": [
-                "D:\\u2718717\\TankGame\\TankGame\\TankGame\\RayLibWithGUI\\x64\\Debug\\vc143.pdb",
-                "x64\\Debug\\",
-                "D:\\u2718717\\TankGame\\TankGame\\TankGame\\RayLibWithGUI\\x64\\Debug\\MenuCommands.h.ifc"
-            ],
-            "provides": [
-                {
-                    "logical-name": "MenuCommands.h",
-                    "source-path": "d:\\u2718717\\tankgame\\tankgame\\tankgame\\raylibwithgui\\menucommands.h",
-                    "lookup-method": "absolute"
-                }
-            ],
-            "requires": []
-        }
-    ]
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\max\\downloads\\tankgame (3)\\tankgame\\raylibwithgui\\menucommands.h",
+        "ProvidedModule": "",
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
 }

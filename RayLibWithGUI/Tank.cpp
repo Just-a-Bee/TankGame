@@ -5,15 +5,16 @@
 #include "TankController.h" // Include is here to avoid recursive inclusion
 
 // Constants
-const float SIZE = 3;
 const float BULLET_DISTANCE = 2.2f;
 
 
 // Constructor function
 Tank::Tank() {
 	// Initialize model
-	mesh = GenMeshCube(SIZE, SIZE, SIZE);
+	setSize(3);
+	mesh = GenMeshCube(getSize(), getSize(), getSize());
 	model = LoadModelFromMesh(mesh);
+	
 }
 
 
@@ -50,11 +51,6 @@ TankController* Tank::getController() {
 	return controller;
 }
 
-// Bounds function based on size of mesh
-BoundingBox Tank::bounds() {
-	return BoundingBox(Vector3AddValue(getPosition(), -SIZE/2), Vector3AddValue(getPosition(), SIZE/2));
-}
-
 
 // Functions called every frame
 void Tank::process() {
@@ -88,12 +84,13 @@ void Tank::move(float leftTrack, float rightTrack) {
 	float moveDistance = (leftTrack + rightTrack) * moveSpeed * GetFrameTime();
 	setPosition(Vector3Add(getPosition(), Vector3Scale(forwardVector(), moveDistance)));
 
-	// If colliding with a wall, go back to previous position
+	// If colliding with a wall or tank on the same team, go back to previous position
 	for (Actor* a : getOverlappingActors()) {
-		if (dynamic_cast<Wall*>(a))
+		if (dynamic_cast<Wall*>(a)
+			|| (dynamic_cast<Tank*>(a) && a->getTeam() == getTeam())) {
 			setPosition(previousPosition);
+		}
 	}
-
 }
 
 
@@ -102,7 +99,7 @@ void Tank::move(float leftTrack, float rightTrack) {
 void Tank::takeDamage(float damage) {
 	health -= damage;
 	if (health <= 0) {
-		getManager()->incrementScore();
+		GameData::getInstance()->incrementScore(1);
 		queueRemove();
 	}
 }

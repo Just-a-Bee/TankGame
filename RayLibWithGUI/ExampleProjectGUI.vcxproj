@@ -134,6 +134,7 @@
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="ActorManager.cpp" />
+    <ClCompile Include="AIController.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="FireTank.cpp" />
@@ -143,7 +144,6 @@
     <ClCompile Include="MenuCommands.cpp" />
     <ClCompile Include="MenuCommands.h" />
     <ClCompile Include="MenuState.cpp" />
-    <ClCompile Include="OverState.cpp" />
     <ClCompile Include="PlayerController.cpp" />
     <ClCompile Include="PlayState.cpp" />
     <ClCompile Include="State.cpp" />
@@ -154,9 +154,13 @@
   <ItemGroup>
     <ClInclude Include="Actor.h" />
     <ClInclude Include="ActorManager.h" />
+    <ClInclude Include="AIController.h" />
+    <ClInclude Include="AStar.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Button.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="GameData.h" />
+    <ClInclude Include="HowToState.h" />
     <ClInclude Include="MenuState.h" />
     <ClInclude Include="OverState.h" />
     <ClInclude Include="PlayerController.h" />
@@ -166,7 +170,11 @@
     <ClInclude Include="Tank.h" />
     <ClInclude Include="TankController.h" />
     <ClInclude Include="Team.h" />
+    <ClInclude Include="TitleState.h" />
     <ClInclude Include="Wall.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

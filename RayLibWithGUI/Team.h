@@ -1,4 +1,4 @@
-// Definition for a team struct
+// Definition for the Team struct
 
 #include <string>
 #include "raylib.h"
@@ -7,22 +7,15 @@
 #define TEAM
 
 struct Team {
-	std::string name = "TEAM_NAME";
 	Color primaryColor = GRAY;
 	Color secondaryColor = DARKGRAY;
 	// constructors
 	Team() {}
 
-	Team(std::string s, Color t, Color b) {
-		name = s;
+	Team(Color t, Color b) {
 		primaryColor = t;
 		secondaryColor = b;
 	}
-
-
-
-
-
 };
 
 #endif TEAM

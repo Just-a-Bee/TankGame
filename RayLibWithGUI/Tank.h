@@ -4,6 +4,7 @@
 
 #include "Actor.h"
 #include "Wall.h"
+#include "GameData.h"
 class TankController; // Declare class to avoid recursive inclusions
 
 #ifndef TANK_H
@@ -40,9 +41,6 @@ public:
 	float getCollideDamage();
 	void setController(TankController*);
 	TankController* getController();
-
-	// Bounds function
-	BoundingBox bounds();
 
 	// Called every frame
 	virtual void process();

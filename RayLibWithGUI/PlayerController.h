@@ -1,4 +1,5 @@
-// Player controller moves the tank based on input
+// Specification file for PlayerController Class
+// Allows user input to control a Tank
 
 #include "TankController.h"
 
@@ -17,10 +18,11 @@ const GamepadButton gamepadInputs[] = { GAMEPAD_BUTTON_LEFT_TRIGGER_2, GAMEPAD_B
 class PlayerController : public TankController {
 private:
 
-	InputMode mode = KEYBOARD;
+	InputMode mode = KEYBOARD; // Current input mode, used to decide if keyboard or gamepad input should be read
 	int gamepad = 0;
 
 	InputMode updateInputMode();
+	// Functions to get input from input
 	void getKeyboardInput(float&, float&, bool&);
 	void getGamepadInput(float&, float&, bool&);
 

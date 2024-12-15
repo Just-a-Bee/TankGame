@@ -18,6 +18,12 @@ Vector3 Actor::getPosition() {
 void Actor::setPosition(Vector3 p) {
 	position = p;
 }
+float Actor::getSize() {
+	return size;
+}
+void Actor::setSize(float s) {
+	size = s;
+}
 float Actor::getRotation() {
 	return rotation;
 }
@@ -40,9 +46,9 @@ Vector3 Actor::forwardVector() {
 	return Vector3RotateByAxisAngle(Vector3(1, 0, 0), Vector3(0, 1, 0), rotationRadians);
 }
 
-// Virtual function returns the bounding box of the actor
+// Return the bounding box of the actor based on its size
 BoundingBox Actor::bounds() {
-	return BoundingBox{ Vector3{0,0,0}, Vector3{0,0,0} };
+	return BoundingBox{ Vector3SubtractValue(position, size/2), Vector3AddValue(position, size/2) };
 }
 
 // Function to return a vector of actors that overlap this

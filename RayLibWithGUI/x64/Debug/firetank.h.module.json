@@ -1,22 +1,9 @@
 {
-    "version": 1,
-    "revision": 0,
-    "rules": [
-        {
-            "primary-output": "x64\\Debug\\FireTank.h.obj",
-            "outputs": [
-                "D:\\u2718717\\TankGame\\TankGame\\TankGame\\RayLibWithGUI\\x64\\Debug\\vc143.pdb",
-                "x64\\Debug\\",
-                "D:\\u2718717\\TankGame\\TankGame\\TankGame\\RayLibWithGUI\\x64\\Debug\\FireTank.h.ifc"
-            ],
-            "provides": [
-                {
-                    "logical-name": "FireTank.h",
-                    "source-path": "d:\\u2718717\\tankgame\\tankgame\\tankgame\\raylibwithgui\\firetank.h",
-                    "lookup-method": "absolute"
-                }
-            ],
-            "requires": []
-        }
-    ]
+    "Version": "1.1",
+    "Data": {
+        "Source": "c:\\users\\max\\downloads\\tankgame (3)\\tankgame\\raylibwithgui\\firetank.h",
+        "ProvidedModule": "",
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
 }

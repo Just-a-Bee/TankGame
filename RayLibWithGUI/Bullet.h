@@ -26,9 +26,6 @@ public:
 	void setLifeTime(float);
 	float getLifeTime();
 
-	// Return functions
-	BoundingBox bounds();
-
 	// Called every frame
 	void process();
 	void draw();

@@ -25,12 +25,18 @@
     <Filter Include="Resource Files\Source Files\Actors\Tanks\TankControllers">
       <UniqueIdentifier>{ef2b9b52-5d1a-409c-8c4b-fca99eccf6e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Source Files\States\Menus">
+      <UniqueIdentifier>{3311f13c-4925-4ce7-a706-77407aa5005f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\States\Menus\MenuObjects">
+      <UniqueIdentifier>{9e80210f-1d9b-4ff8-b237-af825b415f2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Source Files\Actors\ActorObjects">
+      <UniqueIdentifier>{ec9f5461-d9bc-458d-a13f-5f380a1db651}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
-      <Filter>Resource Files\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ActorManager.cpp">
       <Filter>Resource Files\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Actor.cpp">
@@ -54,22 +60,7 @@
     <ClCompile Include="TankController.cpp">
       <Filter>Resource Files\Source Files\Actors\Tanks\TankControllers</Filter>
     </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Resource Files\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuCommands.cpp">
-      <Filter>Resource Files\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuCommands.h">
-      <Filter>Resource Files\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuState.cpp">
-      <Filter>Resource Files\Source Files\States</Filter>
-    </ClCompile>
     <ClCompile Include="PlayState.cpp">
-      <Filter>Resource Files\Source Files\States</Filter>
-    </ClCompile>
-    <ClCompile Include="OverState.cpp">
       <Filter>Resource Files\Source Files\States</Filter>
     </ClCompile>
     <ClCompile Include="Wall.cpp">
@@ -81,14 +72,26 @@
     <ClCompile Include="GameData.cpp">
       <Filter>Resource Files\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AIController.cpp">
+      <Filter>Resource Files\Source Files\Actors\Tanks\TankControllers</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuState.cpp">
+      <Filter>Resource Files\Source Files\States\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommands.cpp">
+      <Filter>Resource Files\Source Files\States\Menus\MenuObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuCommands.h">
+      <Filter>Resource Files\Source Files\States\Menus\MenuObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Resource Files\Source Files\States\Menus\MenuObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorManager.cpp">
+      <Filter>Resource Files\Source Files\Actors\ActorObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ActorManager.h">
-      <Filter>Resource Files\Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Team.h">
-      <Filter>Resource Files\Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Actor.h">
       <Filter>Resource Files\Source Files\Actors</Filter>
     </ClInclude>
@@ -107,16 +110,7 @@
     <ClInclude Include="TankController.h">
       <Filter>Resource Files\Source Files\Actors\Tanks\TankControllers</Filter>
     </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Resource Files\Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuState.h">
-      <Filter>Resource Files\Source Files\States</Filter>
-    </ClInclude>
     <ClInclude Include="PlayState.h">
-      <Filter>Resource Files\Source Files\States</Filter>
-    </ClInclude>
-    <ClInclude Include="OverState.h">
       <Filter>Resource Files\Source Files\States</Filter>
     </ClInclude>
     <ClInclude Include="Wall.h">
@@ -128,5 +122,40 @@
     <ClInclude Include="GameData.h">
       <Filter>Resource Files\Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="AIController.h">
+      <Filter>Resource Files\Source Files\Actors\Tanks\TankControllers</Filter>
+    </ClInclude>
+    <ClInclude Include="HowToState.h">
+      <Filter>Resource Files\Source Files\States\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuState.h">
+      <Filter>Resource Files\Source Files\States\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="OverState.h">
+      <Filter>Resource Files\Source Files\States\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleState.h">
+      <Filter>Resource Files\Source Files\States\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Resource Files\Source Files\States\Menus\MenuObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorManager.h">
+      <Filter>Resource Files\Source Files\Actors\ActorObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="AStar.h">
+      <Filter>Resource Files\Source Files\Actors\ActorObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Team.h">
+      <Filter>Resource Files\Source Files\Actors\ActorObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Resource Files\Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

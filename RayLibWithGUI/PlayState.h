@@ -1,53 +1,66 @@
-// Specification file for play state class
-// Draws each frame of the game, spawns enemies, processes actors, handles collisions
-
+// Specification file for play state class, this is the state the actual game runs in
+// Initializes game state, stores and moves the camera, handles spawning of enemy actors
+// Each frame: processes changes for actors, then draws the actors and the hud
 
 #include "State.h"
 #include "Wall.h"
 #include "PlayerController.h"
+#include "AIController.h"
 #include "GameData.h"
 
 #ifndef PLAYSTATE_H
 #define PLAYSTATE_H
 
+
+
+
 class PlayState : public GameState
 {
 
 private:
-
-	const float CAMERA_DISTANCE = 3;
-	const float CAMERA_HEIGHT = 55;
-
+	// Camera consts
+	const float CAMERA_DISTANCE = 30;
+	const float CAMERA_HEIGHT = 30;
+	// Enemy consts
 	const float ENEMY_SPAWN_DISTANCE = 30;
+	
+	// Game objects
+	ActorManager actorManager; // Actor manager contains all game Actors
+	Camera3D camera; // Camera is used to draw the 3D environment
 
-	ActorManager actorManager;
-	Camera3D camera;
+	// Actors are given reference to a team, so they know who their allies are
+	Team redTeam = Team(RED, MAROON);
+	Team greenTeam = Team(GREEN, DARKGREEN);
 
-	Team redTeam = Team("Red", RED, MAROON);
-	Team greenTeam = Team("Green", GREEN, DARKGREEN);
+	Tank* player = nullptr; // Reference to the player
 
-	Tank* player = nullptr;
-
+	// Game variables
+	bool isPaused = false;
 	float runtime = 0;
 	float spawnTimer = .1;
 	float spawnTimerMax = 1;
-	
 	float gameOverTime = 3;
 
+	GameData* gameData = GameData::getInstance(); // Reference to the GameData singleton
 
+	// Private functions
 	Camera3D setupCamera();
 	void moveCamera(Camera& camera, Tank* player);
 	float randomFloat(float, float);
 	void spawnEnemy();
+	void drawHud();
+	void togglePause();
+	bool isValidSpawn(Tank*);
 
 public:
-	
-	
-
+	// Enter and exit functions
 	void enterState();
+	void exitState();
+
+	// Functions called every frame
 	void nextFrame();
 	GameState* shouldChangeTo();
-	void exitState();
+	
 
 
 };

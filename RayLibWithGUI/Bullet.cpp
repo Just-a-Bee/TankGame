@@ -4,7 +4,9 @@
 #include "Bullet.h"
 
 // Default constructor
-Bullet::Bullet() {}
+Bullet::Bullet() {
+	setSize(1);
+}
 
 // Set and get functions
 void Bullet::setSpeed(float s) {
@@ -55,8 +57,4 @@ void Bullet::beginOverlap(Actor* a) {
 // Take damage function erases self
 void Bullet::takeDamage(float) {
 	queueRemove();
-}
-
-BoundingBox Bullet::bounds() {
-	return BoundingBox(Vector3AddValue(getPosition(), -.5), Vector3AddValue(getPosition(), .5));
 }

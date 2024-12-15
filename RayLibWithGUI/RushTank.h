@@ -1,5 +1,5 @@
 // Specification file for Rush Tank
-// Smaller and faster than normal tanks, does less damage on contact
+// Faster than normal tanks, does less damage on contact
 
 #include "Tank.h"
 

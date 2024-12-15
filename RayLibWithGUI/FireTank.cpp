@@ -1,8 +1,10 @@
-//Imlementation file for FireTank
+// Imlementation file for FireTank
+// A Tank that can fire Bullets
 
 #include "FireTank.h"
 
-const float BULLET_DISTANCE = 2.2f;
+
+const float BULLET_DISTANCE = 2.2f; // distance bullets spawn from this
 
 
 FireTank::FireTank() {
