@@ -45,6 +45,8 @@ void ActorManager::removeActor(Actor* a) {
 		if (actorVec[i] == a) {
 			actorVec.erase(actorVec.begin() + i);
 			a->setManager(nullptr); // tell actor that manager no longer owns it
+			delete a;
+			
 			return;
 		}
 	}
@@ -74,8 +76,9 @@ void ActorManager::updateOverlaps() {
 // Call remove every actor that shouldve been removed this frame
 void ActorManager::removeActors() {
 	for (Actor* a : removeQueue)
-		if (a->getManager() == this)
+		if (a->getManager() == this) {
 			removeActor(a);
+		}
 	removeQueue.clear();
 }
 // Call draw for every actor in vector, must happen after BeginDrawMode3D(Camera)
@@ -85,3 +88,9 @@ void ActorManager::drawFrame() {
 	}
 }
 
+// Destructor removes all of the actors 
+ActorManager::~ActorManager() {
+	for (Actor* a : actorVec) {
+		removeActor(a);
+	}
+}

@@ -1,12 +1,12 @@
 // Class definition for AStar pathfinding
-// Contains static methods for AIcontroller to call, probably should just move this code in there idk
+// Contains static methods for AIcontroller to call
+// This code is out here to improve the consiceness of the AIController, and allow any other object to reuse this pathfinding
 
 #include <vector>
 #include <iostream>
 
-// Size of the wall map
-const int ROW = 10;
-const int COL = 10;
+#include "Constants.h"
+
 
 typedef std::pair<int, int> Pair; // Pair of ints used for map coordinates
 
@@ -32,7 +32,7 @@ private:
 
 	// Function to find if a position is within range
 	static bool isValid(Pair& p) {
-		if ((p.first < ROW) && (p.second < COL))
+		if ((p.first < MAP_SIZE) && (p.second < MAP_SIZE))
 			if ((p.first >= 0) && (p.second >= 0))
 				return true;
 		return false;
@@ -59,10 +59,10 @@ public:
 		// TODO Handle invalid inputs
 
 		//Initialize nodes
-		PathfindingNode nodes[ROW][COL]; // Map size must be constant
+		PathfindingNode nodes[MAP_SIZE][MAP_SIZE]; // Map size must be constant
 
-		for (int i = 0; i < ROW; i++)
-			for (int j = 0; j < COL; j++)
+		for (int i = 0; i < MAP_SIZE; i++)
+			for (int j = 0; j < MAP_SIZE; j++)
 				nodes[i][j].pos = Pair{ i,j };
 
 

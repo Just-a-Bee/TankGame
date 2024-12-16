@@ -35,6 +35,9 @@ void Button::setDepressed(bool d) {
 bool Button::isDepressed() {
 	return depressed;
 }
+Command* Button::getCommand() {
+	return pressCommand;
+}
 
 // Press function calls funcPtr
 void Button::press() {

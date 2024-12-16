@@ -14,10 +14,6 @@ private:
 	float cooldown = 0;
 	float cooldownMax = .3f;
 	float bulletSpeed = 50;
-	// Bullet Pooling vars
-	Bullet* bulletPool;
-	int bulletCount = 10;
-	int fireIndex = 0;
 public:
 	// Constructor function
 	FireTank();

@@ -7,6 +7,7 @@
 #include "PlayerController.h"
 #include "AIController.h"
 #include "GameData.h"
+#include "Constants.h"
 
 #ifndef PLAYSTATE_H
 #define PLAYSTATE_H
@@ -18,11 +19,7 @@ class PlayState : public GameState
 {
 
 private:
-	// Camera consts
-	const float CAMERA_DISTANCE = 30;
-	const float CAMERA_HEIGHT = 30;
-	// Enemy consts
-	const float ENEMY_SPAWN_DISTANCE = 30;
+
 	
 	// Game objects
 	ActorManager actorManager; // Actor manager contains all game Actors

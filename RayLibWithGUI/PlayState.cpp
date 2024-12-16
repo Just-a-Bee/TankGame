@@ -4,11 +4,7 @@
 #include "OverState.h" // Included here to prevent self inclusion
 
 
-// Game world size
-const int WORLD_MIN_X = 0;
-const int WORLD_MAX_X = 100;
-const int WORLD_MIN_Z = 0;
-const int WORLD_MAX_Z = 100;
+
 
 // Function called when the state is entered, initialize all game objects
 void PlayState::enterState() {
@@ -57,7 +53,7 @@ void PlayState::nextFrame() {
 
 		moveCamera(camera, player); // Move the camera
 
-		if (!player->belongsToManager(&actorManager))
+		if (!player)
 			gameOverTime -= GetFrameTime();
 	}
 	

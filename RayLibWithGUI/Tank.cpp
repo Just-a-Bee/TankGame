@@ -104,3 +104,7 @@ void Tank::takeDamage(float damage) {
 	}
 }
 
+// Destructor deletes pointer to controller
+Tank::~Tank() {
+	delete controller;
+}

@@ -37,6 +37,7 @@ public:
 	Vector2 getSize();
 	void setDepressed(bool);
 	bool isDepressed();
+	Command* getCommand();
 
 	// Function for when button is pressed
 	void press();

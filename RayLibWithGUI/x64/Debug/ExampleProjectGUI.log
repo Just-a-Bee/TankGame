@@ -1,3 +1,4 @@
 ﻿  Scanning sources for module dependencies...
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  ExampleProjectGUI.vcxproj -> C:\Users\max\Downloads\TankGame (3)\TankGame\x64\Debug\ExampleProjectGUI.exe
+  PlayState.cpp
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\PlayState.h(37,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  ExampleProjectGUI.vcxproj -> D:\u2718717\TankGame\TankGame\x64\Debug\ExampleProjectGUI.exe

@@ -54,7 +54,7 @@ public:
 	// Damage function reduces health
 	void takeDamage(float);
 
-
+	~Tank();
 	
 };
 

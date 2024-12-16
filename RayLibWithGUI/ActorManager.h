@@ -51,6 +51,8 @@ public:
 	void removeActors();
 	void drawFrame();
 
+	~ActorManager();
+
 };
 
 
