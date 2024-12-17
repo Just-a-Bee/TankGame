@@ -8,6 +8,8 @@ const float BULLET_DISTANCE = 2.2f; // distance bullets spawn from this
 
 
 FireTank::FireTank() {
+	// Initialize bullet pool
+	bulletPool = new Bullet[bulletCount];
 };
 
 // Set and get functions
@@ -45,7 +47,16 @@ void FireTank::fire() {
 		cooldown = cooldownMax; // Reset cooldown
 
 
-		Bullet* b = new Bullet;
+		// Get the next bullet from our pool
+		Bullet* b = &bulletPool[fireIndex];
+		fireIndex += 1;
+		if (fireIndex == bulletCount)
+			fireIndex = 0;
+		// Check if the bullet is already in the scene
+		if (b->belongsToManager(getManager())) {
+			std::cout << "Failed to fire because bullet is already in scene";
+			return;
+		}
 
 		// Set the bullet's variables
 		b->setPosition(Vector3Add(getPosition(), Vector3Scale(forwardVector(), BULLET_DISTANCE)));
@@ -58,4 +69,9 @@ void FireTank::fire() {
 		getManager()->addActor(b);
 	}
 
+}
+
+// Deallocate bullet pool in destructor
+FireTank::~FireTank() {
+	delete[] bulletPool;
 }

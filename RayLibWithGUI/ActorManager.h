@@ -2,9 +2,11 @@
 // Contains vector of all actors Calls process and draw functions for each actor
 
 #include <vector>
+#include "Team.h"
 
 
 class Actor; // tell it actors exist, Actor.h is included in implementation
+class Tank;
 
 #ifndef ACTORMANAGER_H
 #define ACTORMANAGER_H
@@ -16,6 +18,13 @@ private:
 	// Stores all actors
 	std::vector<Actor*> actorVec;
 	std::vector<Actor*> removeQueue; // Queue of actors to be removed after processing frame
+
+	Tank* player = nullptr;
+	std::vector<Tank*> enemyPool; // Vector of unspawned enemies
+
+	// Actors are given reference to a team, so they know who their allies are
+	Team redTeam = Team(RED, MAROON);
+	Team greenTeam = Team(GREEN, DARKGREEN);
 
 
 	// Map of walls. Used to spawn the walls, and for AI pathfinding
@@ -42,8 +51,14 @@ public:
 	void queueRemoveActor(Actor* a);
 	void removeActor(Actor* a);
 
+	// More specific functions
+	void spawnPlayer();
+	void spawnEnemy();
+	bool isValidSpawn(Tank*);
+
 	// Set and get functions
 	std::vector<std::vector<int>> getWallMap();
+	Tank* getPlayer();
 
 	// Functions called every frame
 	void processFrame();

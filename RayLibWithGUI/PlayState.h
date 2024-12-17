@@ -22,14 +22,8 @@ private:
 
 	
 	// Game objects
-	ActorManager actorManager; // Actor manager contains all game Actors
+	ActorManager* actorManager = new ActorManager; // Actor manager contains all game Actors
 	Camera3D camera; // Camera is used to draw the 3D environment
-
-	// Actors are given reference to a team, so they know who their allies are
-	Team redTeam = Team(RED, MAROON);
-	Team greenTeam = Team(GREEN, DARKGREEN);
-
-	Tank* player = nullptr; // Reference to the player
 
 	// Game variables
 	bool isPaused = false;
@@ -43,11 +37,9 @@ private:
 	// Private functions
 	Camera3D setupCamera();
 	void moveCamera(Camera& camera, Tank* player);
-	float randomFloat(float, float);
-	void spawnEnemy();
 	void drawHud();
 	void togglePause();
-	bool isValidSpawn(Tank*);
+
 
 public:
 	// Enter and exit functions

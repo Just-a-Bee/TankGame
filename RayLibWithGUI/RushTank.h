@@ -13,6 +13,7 @@ public:
 		setRotateSpeed(60);
 		setHealth(1);
 		setCollideDamage(2);
+		setMaxHealth(1);
 	}
 };
 

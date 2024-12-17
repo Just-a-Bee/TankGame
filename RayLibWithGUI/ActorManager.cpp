@@ -7,6 +7,8 @@
 #include "FireTank.h";
 #include "PlayerController.h"
 #include "AIController.h"
+#include "RushTank.h"
+#include "Constants.h"
 
 // Constructor function initializes actors
 ActorManager::ActorManager() {
@@ -45,18 +47,76 @@ void ActorManager::removeActor(Actor* a) {
 		if (actorVec[i] == a) {
 			actorVec.erase(actorVec.begin() + i);
 			a->setManager(nullptr); // tell actor that manager no longer owns it
-			delete a;
 			
+			// if a is an enemy, keep it in the enemy pool
+			Tank* aTank = dynamic_cast<Tank*>(a);
+			if (aTank && a != player) {
+				enemyPool.push_back(aTank);
+			}
+
 			return;
 		}
 	}
 }
+
+void ActorManager::spawnPlayer() {
+	player = new FireTank;
+	player->setController(new PlayerController());
+	player->setPosition(Vector3(15, 1.5f, 15));
+	player->setTeam(&redTeam);
+	addActor(player);
+}
+void ActorManager::spawnEnemy() {
+
+	// Get our enemy from the pool of old enemies, or make a new one
+	Tank* enemy = nullptr;
+	if (enemyPool.size() > 0) {
+		enemy = enemyPool[0];
+		enemyPool.erase(enemyPool.begin());
+		std::cout << "Spawning enemy from pool!";
+	}
+	else {
+		enemy = new RushTank;
+		enemy->setController(new AIController());
+	}
+		
+	enemy->setHealth(enemy->getMaxHealth()); // reset health
+	enemy->setTeam(&greenTeam);
+	addActor(enemy);
+
+	// Pick a random positions for the enemy until the spawn point is valid
+	do {
+
+		float randomAngle = ((float)rand() / RAND_MAX) * (2 * PI); // Calculate a random angle
+		Vector3 enemyDistance = Vector3RotateByAxisAngle(Vector3(ENEMY_SPAWN_DISTANCE, 0, 0), Vector3(0, 1, 0), randomAngle);
+		enemy->setPosition(Vector3Add(enemyDistance, player->getPosition()));
+	} while (!isValidSpawn(enemy));
+}
+// Function to check if an enemy's spawnpoint is valid
+bool ActorManager::isValidSpawn(Tank* t) {
+	// Check spawn point is clear
+	if (t->getOverlappingActors().size() > 0)
+		return false;
+	// Check spawn point is in bounds
+	Vector3 position = t->getPosition();
+	if (position.x > WORLD_MAX_X || position.x < WORLD_MIN_X)
+		return false;
+	if (position.z > WORLD_MAX_Z || position.z < WORLD_MIN_Z)
+		return false;
+
+	return true;
+}
+
+
 
 // Get function for wallMap
 std::vector<std::vector<int>> ActorManager::getWallMap() {
 	return wallMap;
 }
 
+Tank* ActorManager::getPlayer() {
+	return player;
+}
 
 
 // Functions called every frame
@@ -88,9 +148,13 @@ void ActorManager::drawFrame() {
 	}
 }
 
-// Destructor removes all of the actors 
+// Destructor deletes all of the actors 
 ActorManager::~ActorManager() {
 	for (Actor* a : actorVec) {
-		removeActor(a);
+		delete a;
 	}
+	for (Tank* t : enemyPool) {
+		delete t;
+	}
+	delete player;
 }

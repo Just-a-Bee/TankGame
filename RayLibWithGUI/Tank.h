@@ -21,6 +21,7 @@ private:
 	float rotateSpeed = 80;
 	float moveSpeed = 12;
 	// Health vars
+	float maxHealth = 10;
 	float health = 10;
 	float collideDamage = 10;
 	// Controller
@@ -35,6 +36,8 @@ public:
 	float getRotateSpeed();
 	void setMoveSpeed(float);
 	float getMoveSpeed();
+	void setMaxHealth(float);
+	float getMaxHealth();
 	void setHealth(float);
 	float getHealth();
 	void setCollideDamage(float);

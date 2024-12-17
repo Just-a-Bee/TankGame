@@ -1,4 +1,4 @@
 ﻿  Scanning sources for module dependencies...
-  PlayState.cpp
-D:\u2718717\TankGame\TankGame\RayLibWithGUI\PlayState.h(37,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  ActorManager.cpp
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\ActorManager.cpp(7,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
   ExampleProjectGUI.vcxproj -> D:\u2718717\TankGame\TankGame\x64\Debug\ExampleProjectGUI.exe
