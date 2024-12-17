@@ -1,11 +1,8 @@
-// Things to add
-	
-//Pre submission todo
-	// Make maze bigger
-	// Code cleanup
-	// Do something with save path
-	// ActorManager destructor deletes all actors
-	
+// Main.cpp runs a state machine of GameStates
+// Each frame the state's "nextFrame()" is called
+
+
+
 // Future Todo
 	// More enemies
 	// Upgrades

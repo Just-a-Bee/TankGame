@@ -3,9 +3,6 @@
 // Each frame: processes changes for actors, then draws the actors and the hud
 
 #include "State.h"
-#include "Wall.h"
-#include "PlayerController.h"
-#include "AIController.h"
 #include "GameData.h"
 #include "Constants.h"
 
@@ -49,9 +46,6 @@ public:
 	// Functions called every frame
 	void nextFrame();
 	GameState* shouldChangeTo();
-	
-
-
 };
 
 

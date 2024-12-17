@@ -13,9 +13,6 @@ void PlayState::enterState() {
 	// Define the camera
 	camera = setupCamera();
 
-
-	actorManager->spawnPlayer();
-
 }
 
 
@@ -74,11 +71,6 @@ void PlayState::nextFrame() {
 }
 
 
-
-
-
-
-
 // Function to draw the HUD for the game
 void PlayState::drawHud() {
 	// Draw Score
@@ -102,8 +94,6 @@ void PlayState::drawHud() {
 }
 
 
-
-
 // Function to return the camera object with all values set
 Camera3D PlayState::setupCamera() {
 	Camera3D camera = { 0 };
@@ -123,6 +113,7 @@ void PlayState::moveCamera(Camera& camera, Tank* player) {
 	camera.target = Vector3Add(player->getPosition(), Vector3(0, 1, 0)); // target a point just above the player
 }
 
+// If player has been dead for gameOverTime, return OverState
 GameState* PlayState::shouldChangeTo() {
 	if (gameOverTime <= 0) {
 		return new OverState;

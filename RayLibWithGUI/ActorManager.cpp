@@ -13,7 +13,7 @@
 // Constructor function initializes actors
 ActorManager::ActorManager() {
 
-
+	spawnPlayer();
 	
 	// Initialize walls
 	for (int i = 0; i < wallMap.size(); i++)
@@ -73,7 +73,6 @@ void ActorManager::spawnEnemy() {
 	if (enemyPool.size() > 0) {
 		enemy = enemyPool[0];
 		enemyPool.erase(enemyPool.begin());
-		std::cout << "Spawning enemy from pool!";
 	}
 	else {
 		enemy = new RushTank;
@@ -123,7 +122,8 @@ Tank* ActorManager::getPlayer() {
 
 // Call process for every actor in vector
 void ActorManager::processFrame() {
-	for (Actor* a : actorVec) {
+	std::vector<Actor*> actors = actorVec; // make a copy of actorVec, so that it can be changed during process
+	for (Actor* a : actors) {
 			a->process();
 	}
 }

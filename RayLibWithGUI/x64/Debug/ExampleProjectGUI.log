@@ -1,4 +1,29 @@
 ﻿  Scanning sources for module dependencies...
+  AIController.cpp
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\GameData.h(11,25): warning C4129: 's': unrecognized character escape sequence
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\AStar.h(119,62): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\AStar.h(120,71): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\AStar.h(121,63): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\AIController.cpp(127,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\AIController.cpp(128,16): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\AIController.cpp(129,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\AIController.cpp(130,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\AIController.cpp(141,38): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\AIController.cpp(141,68): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   ActorManager.cpp
 D:\u2718717\TankGame\TankGame\RayLibWithGUI\ActorManager.cpp(7,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\GameData.h(11,25): warning C4129: 's': unrecognized character escape sequence
+  Main.cpp
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\GameData.h(11,25): warning C4129: 's': unrecognized character escape sequence
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\PlayState.h(28,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  MenuCommands.cpp
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\GameData.h(11,25): warning C4129: 's': unrecognized character escape sequence
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\PlayState.h(28,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  MenuState.cpp
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\GameData.h(11,25): warning C4129: 's': unrecognized character escape sequence
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\PlayState.h(28,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  PlayState.cpp
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\GameData.h(11,25): warning C4129: 's': unrecognized character escape sequence
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\PlayState.h(28,21): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Generating Code...
   ExampleProjectGUI.vcxproj -> D:\u2718717\TankGame\TankGame\x64\Debug\ExampleProjectGUI.exe
