@@ -61,6 +61,8 @@ public:
 	virtual void takeDamage(float);
 	void queueRemove();
 
+	virtual  ~Actor() {}
+
 };
 
 #endif

@@ -35,6 +35,7 @@ public:
 	virtual void enterState(); // Called when we enter the state
 	void nextFrame();
 	GameState* shouldChangeTo();
+	void exitState(); // Called when we leave state
 
 	virtual void drawBG() {}; // Draw bg function called in nextFrame, used to draw background of menu
 

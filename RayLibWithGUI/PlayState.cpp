@@ -4,11 +4,7 @@
 #include "OverState.h" // Included here to prevent self inclusion
 
 
-// Game world size
-const int WORLD_MIN_X = 0;
-const int WORLD_MAX_X = 100;
-const int WORLD_MIN_Z = 0;
-const int WORLD_MAX_Z = 100;
+
 
 // Function called when the state is entered, initialize all game objects
 void PlayState::enterState() {
@@ -17,14 +13,8 @@ void PlayState::enterState() {
 	// Define the camera
 	camera = setupCamera();
 
-	// Set up actors and add them to manager
-	player = new FireTank;
-	player->setController(new PlayerController());
-	player->setPosition(Vector3(15, 1.5f, 15));
-	player->setTeam(&redTeam);
-	actorManager.addActor(player);
 
-	spawnEnemy();
+	actorManager->spawnPlayer();
 
 }
 
@@ -47,17 +37,18 @@ void PlayState::nextFrame() {
 		spawnTimer -= GetFrameTime();
 		if (spawnTimer <= 0) {
 			spawnTimer = spawnTimerMax;
-			spawnEnemy();
+			actorManager->spawnEnemy();
 		}
 
 		// Update the actor data for the frame
-		actorManager.processFrame();
-		actorManager.updateOverlaps();
-		actorManager.removeActors();
+		actorManager->processFrame();
+		actorManager->updateOverlaps();
+		actorManager->removeActors();
 
-		moveCamera(camera, player); // Move the camera
+		moveCamera(camera, actorManager->getPlayer()); // Move the camera
 
-		if (!player->belongsToManager(&actorManager))
+		// If the player has died
+		if (!actorManager->getPlayer()->belongsToManager(actorManager))
 			gameOverTime -= GetFrameTime();
 	}
 	
@@ -71,7 +62,7 @@ void PlayState::nextFrame() {
 	// Draw the floor
 	DrawGrid(100, 10);
 
-	actorManager.drawFrame();
+	actorManager->drawFrame();
 
 	// Stop drawing in 3D
 	EndMode3D();
@@ -83,36 +74,9 @@ void PlayState::nextFrame() {
 }
 
 
-// Function to spawn a new enemy
-void PlayState::spawnEnemy() {
-	Tank* enemy = new RushTank;
-	enemy->setTeam(&greenTeam);
-	enemy->setController(new AIController());
-	actorManager.addActor(enemy);
 
-	// Pick a random positions for the enemy until the spawn point is valid
-	do  {
-		Vector3 enemyDistance = Vector3RotateByAxisAngle(Vector3(ENEMY_SPAWN_DISTANCE, 0, 0), Vector3(0, 1, 0), randomFloat(0, 2 * PI));
-		enemy->setPosition(Vector3Add(enemyDistance, player->getPosition()));
-	} 
-	while (!isValidSpawn(enemy));
 
-}
 
-// Function to check if an enemy's spawnpoint is valid
-bool PlayState::isValidSpawn(Tank* enemy) {
-	// Check spawn point is clear
-	if (enemy->getOverlappingActors().size() > 0)
-		return false;
-	// Check spawn point is in bounds
-	Vector3 position = enemy->getPosition();
-	if (position.x > WORLD_MAX_X || position.x < WORLD_MIN_X)
-		return false;
-	if (position.z > WORLD_MAX_Z || position.z < WORLD_MIN_Z)
-		return false;
-
-	return true;
-}
 
 
 // Function to draw the HUD for the game
@@ -125,7 +89,7 @@ void PlayState::drawHud() {
 	int drawX = 750;
 	Color barColor = RED;
 	for (int i = 0; i < 10; i++) {
-		if (i >= player->getHealth()) // If the bar we're drawing is > current health, draw it unfilled
+		if (i >= actorManager->getPlayer()->getHealth()) // If the bar we're drawing is > current health, draw it unfilled
 			barColor = GRAY;
 		DrawRectangle(drawX, 410, 15, 30, barColor);
 		drawX -= 20;
@@ -139,10 +103,6 @@ void PlayState::drawHud() {
 
 
 
-// function to return a random float within a range
-float PlayState::randomFloat(float min, float max) {
-	return ((float)rand() / RAND_MAX) * (max - min) + min;
-}
 
 // Function to return the camera object with all values set
 Camera3D PlayState::setupCamera() {
@@ -180,4 +140,5 @@ void PlayState::togglePause() {
 void PlayState::exitState() {
 	if (gameData->getScore() > gameData->getHighScore())
 		gameData->setHighScore(gameData->getScore());
+	delete actorManager;
 }

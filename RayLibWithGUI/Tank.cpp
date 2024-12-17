@@ -31,6 +31,12 @@ void Tank::setMoveSpeed(float s) {
 float Tank::getMoveSpeed() {
 	return moveSpeed;
 }
+void Tank::setMaxHealth(float h) {
+	maxHealth = h;
+}
+float Tank::getMaxHealth() {
+	return maxHealth;
+}
 void Tank::setHealth(float h) {
 	health = h;
 }
@@ -104,3 +110,7 @@ void Tank::takeDamage(float damage) {
 	}
 }
 
+// Destructor deletes pointer to controller
+Tank::~Tank() {
+	delete controller;
+}

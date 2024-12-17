@@ -85,3 +85,9 @@ void MenuState::handleMouseClick() {
 GameState* MenuState::shouldChangeTo() {
 	return returnState;
 }
+
+void MenuState::exitState() {
+	for (Button b : buttonVec) {
+		delete b.getCommand(); // Deallocate button commands
+	}
+}

@@ -1,3 +1,4 @@
 ﻿  Scanning sources for module dependencies...
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  ExampleProjectGUI.vcxproj -> C:\Users\max\Downloads\TankGame (3)\TankGame\x64\Debug\ExampleProjectGUI.exe
+  ActorManager.cpp
+D:\u2718717\TankGame\TankGame\RayLibWithGUI\ActorManager.cpp(7,1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  ExampleProjectGUI.vcxproj -> D:\u2718717\TankGame\TankGame\x64\Debug\ExampleProjectGUI.exe

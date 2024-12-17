@@ -14,10 +14,11 @@ private:
 	float cooldown = 0;
 	float cooldownMax = .3f;
 	float bulletSpeed = 50;
-	// Bullet Pooling vars
-	Bullet* bulletPool;
-	int bulletCount = 10;
+	// Bullet pool vars
+	Bullet* bulletPool = nullptr;
 	int fireIndex = 0;
+	int bulletCount = 5;
+
 public:
 	// Constructor function
 	FireTank();
@@ -36,6 +37,7 @@ public:
 	// Function to fire, adds a bullet to the manager's vector
 	void fire();
 
+	~FireTank();
 
 };
 

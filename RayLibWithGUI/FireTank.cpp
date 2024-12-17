@@ -46,6 +46,7 @@ void FireTank::fire() {
 	if (cooldown <= 0) {
 		cooldown = cooldownMax; // Reset cooldown
 
+
 		// Get the next bullet from our pool
 		Bullet* b = &bulletPool[fireIndex];
 		fireIndex += 1;
@@ -68,4 +69,9 @@ void FireTank::fire() {
 		getManager()->addActor(b);
 	}
 
+}
+
+// Deallocate bullet pool in destructor
+FireTank::~FireTank() {
+	delete[] bulletPool;
 }
