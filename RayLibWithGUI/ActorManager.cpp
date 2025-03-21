@@ -4,7 +4,7 @@
 #include "ActorManager.h"
 #include "Actor.h" // Actor is included here to get around circular inclusion
 #include "Wall.h" 
-#include "FireTank.h";
+#include "PlayerTank.h";
 #include "PlayerController.h"
 #include "AIController.h"
 #include "RushTank.h"
@@ -60,7 +60,7 @@ void ActorManager::removeActor(Actor* a) {
 }
 
 void ActorManager::spawnPlayer() {
-	player = new FireTank;
+	player = new PlayerTank;
 	player->setController(new PlayerController());
 	player->setPosition(Vector3(15, 1.5f, 15));
 	player->setTeam(&redTeam);
@@ -83,13 +83,27 @@ void ActorManager::spawnEnemy() {
 	enemy->setTeam(&greenTeam);
 	addActor(enemy);
 
+	int tries = 0;
+	bool validSpawnFound = false;
+
 	// Pick a random positions for the enemy until the spawn point is valid
 	do {
-
+		
 		float randomAngle = ((float)rand() / RAND_MAX) * (2 * PI); // Calculate a random angle
 		Vector3 enemyDistance = Vector3RotateByAxisAngle(Vector3(ENEMY_SPAWN_DISTANCE, 0, 0), Vector3(0, 1, 0), randomAngle);
 		enemy->setPosition(Vector3Add(enemyDistance, player->getPosition()));
-	} while (!isValidSpawn(enemy));
+		tries++;
+		validSpawnFound = isValidSpawn(enemy);
+
+	} while ( !validSpawnFound && tries < 20);
+
+	// If we failed to find a valid spawn, remove the enemy
+	if (!validSpawnFound) {
+		removeActor(enemy);
+	}
+
+
+
 }
 // Function to check if an enemy's spawnpoint is valid
 bool ActorManager::isValidSpawn(Tank* t) {

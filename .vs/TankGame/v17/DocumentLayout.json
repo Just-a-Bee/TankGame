@@ -1,0 +1,356 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\HowToState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\HowToState.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\PlayState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\PlayState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\ActorManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\ActorManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\Actor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\Constants.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\AStar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\AStar.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\PlayerTank.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\PlayerTank.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\AIController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\AIController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Tank.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\Tank.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Powerup.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\Powerup.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Powerup.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\Powerup.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\Actor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\PlayerTank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\PlayerTank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Tank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\Tank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\FireTank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\FireTank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\FireTank.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\FireTank.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\RushTank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B97B91C3-AAFE-4B22-944A-85294595AA40}|RayLibWithGUI\\ExampleProjectGUI.vcxproj|solutionrelative:RayLibWithGUI\\RushTank.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HowToState.h",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\HowToState.h",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\HowToState.h",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\HowToState.h*",
+              "RelativeToolTip": "RayLibWithGUI\\HowToState.h*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-20T15:11:51.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Constants.h",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Constants.h",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\Constants.h",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Constants.h",
+              "RelativeToolTip": "RayLibWithGUI\\Constants.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-20T14:59:59.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Actor.cpp",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Actor.cpp",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\Actor.cpp",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Actor.cpp",
+              "RelativeToolTip": "RayLibWithGUI\\Actor.cpp",
+              "ViewState": "AgIAAD4AAAAAAAAAAAASwEgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T11:22:21.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "vector",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\vector",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\vector",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\vector",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\vector",
+              "ViewState": "AgIAAJ8CAAAAAAAAAAASwKoCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-20T11:21:51.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AStar.h",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\AStar.h",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\AStar.h",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\AStar.h",
+              "RelativeToolTip": "RayLibWithGUI\\AStar.h",
+              "ViewState": "AgIAAEMAAAAAAAAAAAASwDoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-20T11:21:12.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AIController.cpp",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\AIController.cpp",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\AIController.cpp",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\AIController.cpp",
+              "RelativeToolTip": "RayLibWithGUI\\AIController.cpp",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAqwIkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T11:21:01.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Main.cpp",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\Main.cpp",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Main.cpp",
+              "RelativeToolTip": "RayLibWithGUI\\Main.cpp",
+              "ViewState": "AgIAABEAAAAAAAAAAAAqwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-20T11:20:48.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "utility",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.38.33130\\include\\utility",
+              "ViewState": "AgIAADYBAAAAAAAAAAAqwEIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-20T11:20:43.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PlayerTank.h",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\PlayerTank.h",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\PlayerTank.h",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\PlayerTank.h",
+              "RelativeToolTip": "RayLibWithGUI\\PlayerTank.h",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-19T18:41:34.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayState.cpp",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\PlayState.cpp",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\PlayState.cpp",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\PlayState.cpp",
+              "RelativeToolTip": "RayLibWithGUI\\PlayState.cpp",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAGEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-19T18:37:31.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PlayerTank.cpp",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\PlayerTank.cpp",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\PlayerTank.cpp",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\PlayerTank.cpp",
+              "RelativeToolTip": "RayLibWithGUI\\PlayerTank.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-18T15:40:39.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Actor.h",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Actor.h",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\Actor.h",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Actor.h",
+              "RelativeToolTip": "RayLibWithGUI\\Actor.h",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-18T15:31:14.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FireTank.h",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\FireTank.h",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\FireTank.h",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\FireTank.h",
+              "RelativeToolTip": "RayLibWithGUI\\FireTank.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-18T15:25:25.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FireTank.cpp",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\FireTank.cpp",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\FireTank.cpp",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\FireTank.cpp",
+              "RelativeToolTip": "RayLibWithGUI\\FireTank.cpp",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAqwE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-18T15:25:24.487Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Tank.h",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Tank.h",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\Tank.h",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Tank.h",
+              "RelativeToolTip": "RayLibWithGUI\\Tank.h",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-18T15:22:47.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RushTank.h",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\RushTank.h",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\RushTank.h",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\RushTank.h",
+              "RelativeToolTip": "RayLibWithGUI\\RushTank.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-18T15:10:02.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ActorManager.cpp",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\ActorManager.cpp",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\ActorManager.cpp",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\ActorManager.cpp",
+              "RelativeToolTip": "RayLibWithGUI\\ActorManager.cpp",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-18T14:59:14.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Tank.cpp",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Tank.cpp",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\Tank.cpp",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Tank.cpp",
+              "RelativeToolTip": "RayLibWithGUI\\Tank.cpp",
+              "ViewState": "AgIAADQAAAAAAAAAAAAqwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-18T14:57:48.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Powerup.cpp",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Powerup.cpp",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\Powerup.cpp",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Powerup.cpp",
+              "RelativeToolTip": "RayLibWithGUI\\Powerup.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-18T14:06:32.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Powerup.h",
+              "DocumentMoniker": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Powerup.h",
+              "RelativeDocumentMoniker": "RayLibWithGUI\\Powerup.h",
+              "ToolTip": "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\Powerup.h",
+              "RelativeToolTip": "RayLibWithGUI\\Powerup.h",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-18T13:43:27.478Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -16,7 +16,20 @@ Vector3 Actor::getPosition() {
 	return position;
 }
 void Actor::setPosition(Vector3 p) {
+
+	Vector3 previousPos = position;
 	position = p;
+
+	// If colliding with another blocking actor, reset position and call onHitActor
+	if (getManager() && doBlockingCollisions) {
+		for (Actor* a : getOverlappingActors()) {
+			if (a->doBlockingCollisions) {
+				onHitActor(a);
+				a->onHitActor(this);
+				position = previousPos;
+			}
+		}
+	}
 }
 float Actor::getSize() {
 	return size;

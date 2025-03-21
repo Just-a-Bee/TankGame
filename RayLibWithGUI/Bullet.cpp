@@ -5,6 +5,8 @@
 
 // Default constructor
 Bullet::Bullet() {
+
+	setDoBlockingCollisions(false);
 	setSize(1);
 }
 
@@ -48,7 +50,7 @@ void Bullet::draw() {
 
 // Function to collide with other actors
 void Bullet::beginOverlap(Actor* a) {
-	if (a->getTeam() != getTeam()) {
+	if (a->getTeam() != getTeam() && a->getDoBlockingCollisions()) {
 		a->takeDamage(1);
 		queueRemove();
 	}

@@ -46,10 +46,11 @@ public:
 	TankController* getController();
 
 	// Called every frame
-	virtual void process();
-	void draw();
+	virtual void process() override;
+	void draw() override;
 
-	void beginOverlap(Actor* a);
+	void onHitActor(Actor* a) override;
+	void beginOverlap(Actor* a) override;
 
 	// Function to move based on track directions
 	void move(float leftTrack, float rightTrack);

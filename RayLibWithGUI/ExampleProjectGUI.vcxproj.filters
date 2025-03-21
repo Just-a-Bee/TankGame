@@ -34,6 +34,9 @@
     <Filter Include="Resource Files\Source Files\Actors\ActorObjects">
       <UniqueIdentifier>{ec9f5461-d9bc-458d-a13f-5f380a1db651}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Assets">
+      <UniqueIdentifier>{cb8791ac-ae52-432b-a694-90580fc81b42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -89,6 +92,12 @@
     </ClCompile>
     <ClCompile Include="ActorManager.cpp">
       <Filter>Resource Files\Source Files\Actors\ActorObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerTank.cpp">
+      <Filter>Resource Files\Source Files\Actors\Tanks</Filter>
+    </ClCompile>
+    <ClCompile Include="Powerup.cpp">
+      <Filter>Resource Files\Source Files\Actors</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -152,10 +161,27 @@
     <ClInclude Include="Constants.h">
       <Filter>Resource Files\Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="PlayerTank.h">
+      <Filter>Resource Files\Source Files\Actors\Tanks</Filter>
+    </ClInclude>
+    <ClInclude Include="Powerup.h">
+      <Filter>Resource Files\Source Files\Actors</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="README.txt">
       <Filter>Resource Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Speedup.png">
+      <Filter>Resource Files\Assets</Filter>
+    </Image>
+    <Image Include="Assets\Multishot.png">
+      <Filter>Resource Files\Assets</Filter>
+    </Image>
+    <Image Include="Assets\Rapidfire.png">
+      <Filter>Resource Files\Assets</Filter>
+    </Image>
   </ItemGroup>
 </Project>

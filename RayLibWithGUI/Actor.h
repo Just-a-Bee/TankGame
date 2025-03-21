@@ -22,7 +22,9 @@ private:
 
 	ActorManager* manager = nullptr; // Reference to actor manager, stores other actors and calls process and draw functions
 	Team* team = nullptr; // Reference to actor's team
+	bool doBlockingCollisions = true; // If true other 
 	std::vector<Actor*> previousOverlaps; // Stores a vector of overlapping actors on previous frame, used to find new overlapping actors
+
 
 public:
 	// Default Constructor
@@ -35,6 +37,8 @@ public:
 	void setSize(float);
 	float getRotation();
 	void setRotation(float);
+	bool getDoBlockingCollisions() { return doBlockingCollisions; }
+	void setDoBlockingCollisions(bool doBlockingCollisions) { this->doBlockingCollisions = doBlockingCollisions; }
 
 	ActorManager* getManager();
 	void setManager(ActorManager* m);
@@ -55,6 +59,7 @@ public:
 	virtual void draw();
 	
 	// Collision functions
+	virtual void onHitActor(Actor*) {}; // Called when hitting another actor
 	virtual void beginOverlap(Actor*);
 	virtual void endOverlap(Actor*);
 

@@ -31,7 +31,7 @@ public:
 	void draw();
 
 	// Collisions function
-	void beginOverlap(Actor* a);
+	void beginOverlap(Actor* a) override;
 
 	// Damage function
 	void takeDamage(float);

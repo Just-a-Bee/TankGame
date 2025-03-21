@@ -42,33 +42,43 @@ void FireTank::process() {
 
 // Function to fire a bullet
 void FireTank::fire() {
+
+
+
 	// Check if we're under cooldown
 	if (cooldown <= 0) {
-		cooldown = cooldownMax; // Reset cooldown
 
 
-		// Get the next bullet from our pool
-		Bullet* b = &bulletPool[fireIndex];
-		fireIndex += 1;
-		if (fireIndex == bulletCount)
-			fireIndex = 0;
-		// Check if the bullet is already in the scene
-		if (b->belongsToManager(getManager())) {
-			std::cout << "Failed to fire because bullet is already in scene";
-			return;
+		float shotAngle = -shotSpread;
+		for (int i = 0; i < shotCount; i++) {
+			cooldown = cooldownMax; // Reset cooldown
+
+
+			// Get the next bullet from our pool
+			Bullet* b = &bulletPool[fireIndex];
+			fireIndex += 1;
+			if (fireIndex == bulletCount)
+				fireIndex = 0;
+			// Check if the bullet is already in the scene
+			if (b->belongsToManager(getManager())) {
+				std::cout << "Failed to fire because bullet is already in scene";
+				return;
+			}
+
+			// Set the bullet's variables
+			b->setPosition(Vector3Add(getPosition(), Vector3Scale(forwardVector(), BULLET_DISTANCE)));
+			b->setRotation(getRotation() + shotAngle);
+			b->setSpeed(getBulletSpeed());
+			b->setLifeTime(b->getLifeTimeMax());
+			b->setTeam(getTeam());
+
+			// Add bullet to actorManager
+			getManager()->addActor(b);
+
+			shotAngle += (shotSpread / (shotCount - 1)) * 2;
+
 		}
-
-		// Set the bullet's variables
-		b->setPosition(Vector3Add(getPosition(), Vector3Scale(forwardVector(), BULLET_DISTANCE)));
-		b->setRotation(getRotation());
-		b->setSpeed(getBulletSpeed());
-		b->setLifeTime(b->getLifeTimeMax());
-		b->setTeam(getTeam());
-
-		// Add bullet to actorManager
-		getManager()->addActor(b);
 	}
-
 }
 
 // Deallocate bullet pool in destructor

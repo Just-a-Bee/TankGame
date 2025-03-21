@@ -5,14 +5,14 @@
         {
             "primary-output": "x64\\Debug\\MenuCommands.h.obj",
             "outputs": [
-                "D:\\u2718717\\TankGame\\TankGame\\RayLibWithGUI\\x64\\Debug\\vc143.pdb",
+                "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\x64\\Debug\\vc143.pdb",
                 "x64\\Debug\\",
-                "D:\\u2718717\\TankGame\\TankGame\\RayLibWithGUI\\x64\\Debug\\MenuCommands.h.ifc"
+                "C:\\Users\\max\\Documents\\Gamedev Stuff\\TankGame\\RayLibWithGUI\\x64\\Debug\\MenuCommands.h.ifc"
             ],
             "provides": [
                 {
                     "logical-name": "MenuCommands.h",
-                    "source-path": "d:\\u2718717\\tankgame\\tankgame\\raylibwithgui\\menucommands.h",
+                    "source-path": "c:\\users\\max\\documents\\gamedev stuff\\tankgame\\raylibwithgui\\menucommands.h",
                     "lookup-method": "absolute"
                 }
             ],

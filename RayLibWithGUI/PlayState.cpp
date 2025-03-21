@@ -2,8 +2,8 @@
 
 #include "PlayState.h"
 #include "OverState.h" // Included here to prevent self inclusion
-
-
+#include "PlayerTank.h"
+#include "Powerup.h"
 
 
 // Function called when the state is entered, initialize all game objects
@@ -35,6 +35,10 @@ void PlayState::nextFrame() {
 		if (spawnTimer <= 0) {
 			spawnTimer = spawnTimerMax;
 			actorManager->spawnEnemy();
+
+
+
+		
 		}
 
 		// Update the actor data for the frame
@@ -73,6 +77,10 @@ void PlayState::nextFrame() {
 
 // Function to draw the HUD for the game
 void PlayState::drawHud() {
+
+
+	PlayerTank* player = dynamic_cast<PlayerTank*>(actorManager->getPlayer());
+
 	// Draw Score
 	DrawText(TextFormat("Score: %i", gameData->getScore()), 680, 360, 20, BLACK);
 	
@@ -81,11 +89,21 @@ void PlayState::drawHud() {
 	int drawX = 750;
 	Color barColor = RED;
 	for (int i = 0; i < 10; i++) {
-		if (i >= actorManager->getPlayer()->getHealth()) // If the bar we're drawing is > current health, draw it unfilled
-			barColor = GRAY;
+		if (i >= player->getHealth()) // If the bar we're drawing is > current health, draw it unfilled
+			barColor = DARKGRAY;
 		DrawRectangle(drawX, 410, 15, 30, barColor);
 		drawX -= 20;
 	}
+	// Draw the powerup bar
+	Powerup* currentPowerup = player->getCurrentPowerup();
+	if (currentPowerup) {
+		DrawTexture(currentPowerup->icon, 1, 360, WHITE);
+		DrawRectangle(10, 150, 50, 200, DARKGRAY);
+		float barHeight = 200 * (currentPowerup->duration / 5);
+		DrawRectangle(10, 150 + 200 - barHeight, 50, barHeight, currentPowerup->color);
+	}
+	
+
 
 	if (isPaused) {
 		DrawText("Press P to unpause", 350, 300, 20, BLACK);

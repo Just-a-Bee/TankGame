@@ -14,10 +14,12 @@ private:
 	float cooldown = 0;
 	float cooldownMax = .3f;
 	float bulletSpeed = 50;
+	int shotCount = 1; // number of bullets to fire
+	float shotSpread = 0; // degrees to spread the shots evenly between (eg 30 means +- 15? degrees from forward)
 	// Bullet pool vars
 	Bullet* bulletPool = nullptr;
 	int fireIndex = 0;
-	int bulletCount = 5;
+	int bulletCount = 20;
 
 public:
 	// Constructor function
@@ -30,6 +32,10 @@ public:
 	float getCooldownMax();
 	void setBulletSpeed(float);
 	float getBulletSpeed();
+	void setShotCount(int shotCount) { this->shotCount = shotCount;}
+	float getShotCount() { return shotCount; }
+	void setShotSpread(float shotSpread) { this->shotSpread = shotSpread; }
+	float getShotSpread() { return shotSpread; }
 
 	// Called every frame
 	void process();

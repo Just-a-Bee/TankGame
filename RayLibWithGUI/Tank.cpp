@@ -3,6 +3,7 @@
 
 #include "Tank.h"
 #include "TankController.h" // Include is here to avoid recursive inclusion
+#include "Powerup.h"
 
 // Constants
 const float BULLET_DISTANCE = 2.2f;
@@ -68,6 +69,12 @@ void Tank::draw() {
 }
 
 
+void Tank::onHitActor(Actor* a) {
+	if (a->getTeam() != this->getTeam()) {
+		a->takeDamage(collideDamage);
+	}
+}
+
 // Collision function damages target, target will damage this back, we dont need to worry about that
 void Tank::beginOverlap(Actor* a) {
 	if (a->getTeam() != getTeam())
@@ -89,14 +96,6 @@ void Tank::move(float leftTrack, float rightTrack) {
 	// Move forward based on track directions
 	float moveDistance = (leftTrack + rightTrack) * moveSpeed * GetFrameTime();
 	setPosition(Vector3Add(getPosition(), Vector3Scale(forwardVector(), moveDistance)));
-
-	// If colliding with a wall or tank on the same team, go back to previous position
-	for (Actor* a : getOverlappingActors()) {
-		if (dynamic_cast<Wall*>(a)
-			|| (dynamic_cast<Tank*>(a) && a->getTeam() == getTeam())) {
-			setPosition(previousPosition);
-		}
-	}
 }
 
 
@@ -106,6 +105,32 @@ void Tank::takeDamage(float damage) {
 	health -= damage;
 	if (health <= 0) {
 		GameData::getInstance()->incrementScore(1);
+
+
+		float dropRoll = ((float)rand() / RAND_MAX);
+		std::cout << dropRoll << "\n";
+		if (dropRoll > .9) {
+			// Determine which powerup to drop
+			Powerup* powerToSpawn;
+
+
+			if (dropRoll > .99) {
+				powerToSpawn = new MultiShot;
+			}
+			else if (dropRoll > .95) {
+				powerToSpawn = new RapidFire;
+			}
+			else {
+				powerToSpawn = new SpeedBoost;
+			}
+
+			// Create a powerup at this position
+			powerToSpawn->setPosition(getPosition());
+			getManager()->addActor(powerToSpawn);
+
+		}
+
+
 		queueRemove();
 	}
 }
@@ -113,4 +138,5 @@ void Tank::takeDamage(float damage) {
 // Destructor deletes pointer to controller
 Tank::~Tank() {
 	delete controller;
+	UnloadMesh(mesh);
 }
